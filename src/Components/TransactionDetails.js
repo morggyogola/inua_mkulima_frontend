@@ -7,7 +7,7 @@ const TransactionDetails = () => {
 
   const fetchTransaction = async () => {
     try {
-      const response = await fetch(`/api/v1/transaction/${transactionId}`);
+      const response = await fetch(`http://localhost:8080/api/v1/transaction/${transactionId}`);
       if (!response.ok) {
         throw new Error('Transaction not found');
       }
